@@ -84,7 +84,7 @@ print("Frauds" , df["Class"].value_counts()[1] / df.shape[0] *100 , "% of the da
 
 ## Random Under-Sampling
 
-<img src = "img2">
+<img src = "img3">
 
 <p>
 - The first thing we have to do is determine how imbalanced is our class (use value_counts() on the class column to determine the amount for each label)
@@ -92,5 +92,57 @@ print("Frauds" , df["Class"].value_counts()[1] / df.shape[0] *100 , "% of the da
 - Once we determine how many  are considered fraud transactions (Fraud = "1") , we should bring the non-fraud transactions to the same amount as fraud transactions (assuming we want a `50/50` ratio), this will be equivalent to `492 cases of fraud` and `492 cases of non-fraud` transactions.
   
 - After implementing this technique, we have a sub-sample of our dataframe with a 50/50 ratio with regards to our classes. Then the next step we will implement is to shuffle the data to see if our models can maintain a certain accuracy everytime
+  
+</p>
+
+```
+''' we know that our data is highly skewed we should make our data eqivalent(50/50 ratio data) to
+    have a normal distrubution of th classes
+'''
+
+df = df.sample(frac = 1)
+
+fraud_df = df.loc[df["Class"] ==1]
+non_fraud_df = df.loc[df["Class"] ==0][:492]
+
+normal_distributed_df = pd.concat([fraud_df , non_fraud_df])
+
+new_df = normal_distributed_df.sample(frac=1, random_state=42)
+
+new_df.head()
+
+```
+
+```
+new_df["Class"].value_counts().reset_index()
+
+```
+
+<img src = "img4">
+
+<p>
+  Now we created sub-sample which is equally distributed and contain equal number of data from each classes
+</p>
+
+<img src = "img5">
+
+<p>
+
+Correlation Matrices - 
+
+Correlation matrices are the essence of understanding our data. We want to know if there are features that influence heavily in whether a specific transaction is a fraud. However, it is important that we use the correct dataframe (subsample) in order for us to see which features have a high positive or negative correlation with regards to fraud transactions.
+</p>
+
+<img src = "img6">
+
+<p>
+
+Summary and Explanation:
+
+- Negative Correlations: V17, V14, V12 and V10 are negatively correlated. Notice how the lower these values are, the more likely the end result will be a fraud transaction.
+  
+- Positive Correlations: V2, V4, V11, and V19 are positively correlated. Notice how the higher these values are, the more likely the end result will be a fraud transaction.
+  
+- BoxPlots: We will use boxplots to have a better understanding of the distribution of these features in fradulent and non fradulent transactions.
   
 </p>
