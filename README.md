@@ -13,13 +13,47 @@ More background information about the data. Features V1, V2, … V28 are the pri
 </p>
 
 
-<h2>
-  Our Goals
-</h2>
+## Our Goal
 
 <p>
 - Understand the  distribution of the  data that was provided to us.
 - Handle Imbalanced Data
 - Create a 50/50 sub-dataframe ratio of "Fraud" and "Non-Fraud" transactions
 - Determine the Classifiers Model we are going to use and decide which one has a higher accuracy.
+  
 </p>
+
+## Requirements
+
+- **Python Libraries**:
+  - `pandas`, `numpy`, `matplotlib`, `seaborn` , `sklearn`
+- **Kaggle API Key** (for data downloading)
+
+## Getting Started
+
+1. Clone the repository:
+   ```bash
+   git clone <repo-url>
+   ```
+2. Install Python libraries:
+   ```bash
+   pip install -r requirements.txt
+   ```
+3. Set up your Kaggle API, download the data  and follow the steps to load
+   
+    - Run this command on any code editor
+
+      
+   ```
+     !pip install opendatasets
+   ```
+
+   
+    - Once you install library then run below command  for loading data into your editor for that you need to pass your kaggle credentials
+      
+   ```
+       import opendatasets as od
+       url = "https://www.kaggle.com/datasets/paultimothymooney/breast-histopathology-images/data"
+       od.download(url)
+   ```
+
