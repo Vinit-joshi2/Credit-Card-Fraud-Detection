@@ -146,3 +146,24 @@ Summary and Explanation:
 - BoxPlots: We will use boxplots to have a better understanding of the distribution of these features in fradulent and non fradulent transactions.
   
 </p>
+
+<img src = "img7">
+
+<img src = "img8">
+
+<img src = "img9">
+
+
+<p>
+  
+  Visualize Distributions: We first start by visualizing the distribution of the feature we are going to use to eliminate some of the outliers. V14 is the only feature that has a Gaussian distribution compared to features V12 and V10.
+  
+</p>
+
+## Split the Data
+<p>
+
+  we will train four types of classifiers and decide which classifier will be more effective in detecting fraud transactions. Before we have to split our data into training and testing sets and separate the features from the labels.
+
+
+</p>
