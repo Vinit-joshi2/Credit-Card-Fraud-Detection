@@ -165,5 +165,16 @@ Summary and Explanation:
 
   we will train four types of classifiers and decide which classifier will be more effective in detecting fraud transactions. Before we have to split our data into training and testing sets and separate the features from the labels.
 
+<ul>
+  <li>
+    
+   We are splitting our whole data into 80% and 20%
+  </li>
+  <li>
+    
+ Where 80% would be your train data and rest 20% would ne your test data
+  </li>
+</ul>
+
 
 </p>
