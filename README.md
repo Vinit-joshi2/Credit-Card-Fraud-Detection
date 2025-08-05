@@ -17,8 +17,11 @@ More background information about the data. Features V1, V2, … V28 are the pri
 
 <p>
 - Understand the  distribution of the  data that was provided to us.
+  
 - Handle Imbalanced Data
+
 - Create a 50/50 sub-dataframe ratio of "Fraud" and "Non-Fraud" transactions
+
 - Determine the Classifiers Model we are going to use and decide which one has a higher accuracy.
   
 </p>
