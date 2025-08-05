@@ -53,7 +53,28 @@ More background information about the data. Features V1, V2, … V28 are the pri
       
    ```
        import opendatasets as od
-       url = "https://www.kaggle.com/datasets/paultimothymooney/breast-histopathology-images/data"
+       url = "https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud/data"
        od.download(url)
    ```
+
+## Understand the Data
+
+<p>
+  The transaction amount is relatively small. The mean of all the amounts made is approximately USD 88. There are no `Null` values, so we don't have to work on ways to replace values. Most of the transactions were Non-Fraud (99.83%) of the time, while Fraud transactions occurs (017%)of the time in the dataframe.
+</p>
+
+
+```
+print("No Frauds" , df["Class"].value_counts()[0] / df.shape[0] *100 , "% of the datasets")
+print("Frauds" , df["Class"].value_counts()[1] / df.shape[0] *100 , "% of the dataset")
+
+```
+<img src = "img1">
+
+<img src = "img2">
+
+<p>
+  How imbalanced is our original dataset! Most of the transactions are non-fraud. If we use this dataframe as the base for our predictive models and analysis we might get a lot of errors and our algorithms will probably overfit since it will "assume" that most transactions are not fraud. But we don't want our model to assume, we want our model to detect patterns that give signs of fraud!
+</p>
+
 
