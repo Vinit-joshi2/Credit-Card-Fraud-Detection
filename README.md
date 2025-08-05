@@ -81,3 +81,16 @@ print("Frauds" , df["Class"].value_counts()[1] / df.shape[0] *100 , "% of the da
 </p>
 
 
+
+## Random Under-Sampling
+
+<img src = "img2">
+
+<p>
+- The first thing we have to do is determine how imbalanced is our class (use value_counts() on the class column to determine the amount for each label)
+
+- Once we determine how many  are considered fraud transactions (Fraud = "1") , we should bring the non-fraud transactions to the same amount as fraud transactions (assuming we want a `50/50` ratio), this will be equivalent to `492 cases of fraud` and `492 cases of non-fraud` transactions.
+  
+- After implementing this technique, we have a sub-sample of our dataframe with a 50/50 ratio with regards to our classes. Then the next step we will implement is to shuffle the data to see if our models can maintain a certain accuracy everytime
+  
+</p>
