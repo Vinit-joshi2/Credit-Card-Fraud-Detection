@@ -313,3 +313,40 @@ print('Decision Tree Classifier Cross Validation Score: ', round(tree_score.mean
 <p>
   Since we know Logistic Regression Model quiet working well.Now we will focus on Logistic Rrgression Model
 </p>
+
+<img src = "img16">
+
+<img src = "img17">
+
+## Test Data with Logistic Regression
+
+<img src = "img18">
+
+<p>
+<h4> Confusion Matrix:</h4>
+  
+- Positive/Negative: Type of Class (label) ["No", "Yes"] True/False: Correctly or Incorrectly classified by the model.
+
+
+- True Negatives : This is the number of correctly classifications of the "No" (No Fraud Detected) class.
+
+  - Examples - As per data it is Not a fraud and model predict it is not a fraud
+    
+
+
+- False Negatives (Type 2 Error) : This is the number of incorrectly classifications of the "No"(No Fraud Detected) class.
+
+  - Example - AS per  data it is fraud But my model predict it is not fraud
+
+
+- False Positives (Type 1 Error) : This is the number of incorrectly classifications of the "Yes" (Fraud Detected) class
+
+  - Example - AS per data it is Not a fraud But my model predict it is  fraud
+  
+
+
+- True Positives : This is the number of correctly classifications of the "Yes" (Fraud Detected) class.
+
+  - Example - AS per data it is  a fraud and my model predict it is fraud
+</p>
+
