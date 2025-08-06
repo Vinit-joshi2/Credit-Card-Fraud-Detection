@@ -350,3 +350,12 @@ print('Decision Tree Classifier Cross Validation Score: ', round(tree_score.mean
   - Example - AS per data it is  a fraud and my model predict it is fraud
 </p>
 
+<img src = "img19">
+
+<p>
+  Now let's also see the confusion matrix of other classifier model
+</p>
+
+<img src = "img20">
+
+<img src = "img21">
