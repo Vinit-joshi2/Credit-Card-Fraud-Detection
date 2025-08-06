@@ -297,8 +297,9 @@ print('Decision Tree Classifier Cross Validation Score: ', round(tree_score.mean
 <p>Now let calculate AUC-Roc Curve</p>
 <img src = "img13">
 <p>
+  
 - True Positive Rate (TPR) : TPR is the ratio of correctly identified positive instances to the total number of actual positive instances.
-        
+
   - TPR = TP / (TP + FN), where TP is True Positives and FN is False Negatives.
 - False Positive Ratio (FPR) : FPR is the ratio of incorrectly identified negative instances (false positives) to the total number of actual negative instances.
   
