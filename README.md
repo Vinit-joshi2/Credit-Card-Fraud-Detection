@@ -72,9 +72,9 @@ print("No Frauds" , df["Class"].value_counts()[0] / df.shape[0] *100 , "% of the
 print("Frauds" , df["Class"].value_counts()[1] / df.shape[0] *100 , "% of the dataset")
 
 ```
-<img src = "img1">
+<img src = "https://github.com/Vinit-joshi2/Credit-Card-Fraud-Detection/blob/main/images/img1.png">
 
-<img src = "img2">
+<img src = "https://github.com/Vinit-joshi2/Credit-Card-Fraud-Detection/blob/main/images/img2.png">
 
 <p>
   How imbalanced is our original dataset! Most of the transactions are non-fraud. If we use this dataframe as the base for our predictive models and analysis we might get a lot of errors and our algorithms will probably overfit since it will "assume" that most transactions are not fraud. But we don't want our model to assume, we want our model to detect patterns that give signs of fraud!
@@ -84,7 +84,7 @@ print("Frauds" , df["Class"].value_counts()[1] / df.shape[0] *100 , "% of the da
 
 ## Random Under-Sampling
 
-<img src = "img3">
+<img src = "https://github.com/Vinit-joshi2/Credit-Card-Fraud-Detection/blob/main/images/img3.png">
 
 <p>
 - The first thing we have to do is determine how imbalanced is our class (use value_counts() on the class column to determine the amount for each label)
@@ -118,13 +118,13 @@ new_df["Class"].value_counts().reset_index()
 
 ```
 
-<img src = "img4">
+<img src = "https://github.com/Vinit-joshi2/Credit-Card-Fraud-Detection/blob/main/images/img4.png">
 
 <p>
   Now we created sub-sample which is equally distributed and contain equal number of data from each classes
 </p>
 
-<img src = "img5">
+<img src = "https://github.com/Vinit-joshi2/Credit-Card-Fraud-Detection/blob/main/images/img5.png">
 
 <p>
 
@@ -133,7 +133,7 @@ Correlation Matrices -
 Correlation matrices are the essence of understanding our data. We want to know if there are features that influence heavily in whether a specific transaction is a fraud. However, it is important that we use the correct dataframe (subsample) in order for us to see which features have a high positive or negative correlation with regards to fraud transactions.
 </p>
 
-<img src = "img6">
+<img src = "https://github.com/Vinit-joshi2/Credit-Card-Fraud-Detection/blob/main/images/img6.png">
 
 <p>
 
@@ -147,11 +147,11 @@ Summary and Explanation:
   
 </p>
 
-<img src = "img7">
+<img src = "https://github.com/Vinit-joshi2/Credit-Card-Fraud-Detection/blob/main/images/img7.png">
 
-<img src = "img8">
+<img src = "https://github.com/Vinit-joshi2/Credit-Card-Fraud-Detection/blob/main/images/img8.png">
 
-<img src = "img9">
+<img src = "https://github.com/Vinit-joshi2/Credit-Card-Fraud-Detection/blob/main/images/img9.png">
 
 
 <p>
@@ -213,7 +213,7 @@ for key , classifier in classifiers.items():
 
 ```
 
-<img src = "img10">
+<img src = "https://github.com/Vinit-joshi2/Credit-Card-Fraud-Detection/blob/main/images/img10.png">
 
 <p>
   Logistics, SVM , KNeighborsClassifier all of three with 93% accuracy which is quiet good accuracy even after not passed any parameter to the model
@@ -273,7 +273,7 @@ tree_clf = grid_tree.best_estimator_
 
 ```
 
-<img src = "img11">
+<img src = "https://github.com/Vinit-joshi2/Credit-Card-Fraud-Detection/blob/main/images/img11.png">
 
 ```
 
@@ -292,10 +292,10 @@ print('Decision Tree Classifier Cross Validation Score: ', round(tree_score.mean
 
 ```
 
-<img src = "img12">
+<img src = "https://github.com/Vinit-joshi2/Credit-Card-Fraud-Detection/blob/main/images/img12.png">
 
 <p>Now let calculate AUC-Roc Curve</p>
-<img src = "img13">
+<img src = "https://github.com/Vinit-joshi2/Credit-Card-Fraud-Detection/blob/main/images/img13.png">
 <p>
   
 - True Positive Rate (TPR) : TPR is the ratio of correctly identified positive instances to the total number of actual positive instances.
@@ -306,21 +306,21 @@ print('Decision Tree Classifier Cross Validation Score: ', round(tree_score.mean
   - FPR = FP / (FP + TN), where FP is False Positives and TN is True Negatives.
 
 </p>
-<img src = "img14">
+<img src = "https://github.com/Vinit-joshi2/Credit-Card-Fraud-Detection/blob/main/images/img14.png">
 
-<img src = "img15">
+<img src = "https://github.com/Vinit-joshi2/Credit-Card-Fraud-Detection/blob/main/images/img15.png">
 
 <p>
   Since we know Logistic Regression Model quiet working well.Now we will focus on Logistic Rrgression Model
 </p>
 
-<img src = "img16">
+<img src = "https://github.com/Vinit-joshi2/Credit-Card-Fraud-Detection/blob/main/images/img16.png">
 
-<img src = "img17">
+<img src = "https://github.com/Vinit-joshi2/Credit-Card-Fraud-Detection/blob/main/images/img17.png">
 
 ## Test Data with Logistic Regression
 
-<img src = "img18">
+<img src = "https://github.com/Vinit-joshi2/Credit-Card-Fraud-Detection/blob/main/images/img18.png">
 
 <p>
 <h4> Confusion Matrix:</h4>
@@ -350,12 +350,12 @@ print('Decision Tree Classifier Cross Validation Score: ', round(tree_score.mean
   - Example - AS per data it is  a fraud and my model predict it is fraud
 </p>
 
-<img src = "img19">
+<img src = "https://github.com/Vinit-joshi2/Credit-Card-Fraud-Detection/blob/main/images/img19.png">
 
 <p>
   Now let's also see the confusion matrix of other classifier model
 </p>
 
-<img src = "img20">
+<img src = "https://github.com/Vinit-joshi2/Credit-Card-Fraud-Detection/blob/main/images/img20.png">
 
-<img src = "img21">
+<img src = "https://github.com/Vinit-joshi2/Credit-Card-Fraud-Detection/blob/main/images/img21.png">
